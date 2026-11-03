@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>A letter for you</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Flowers are spawned in here -->
+  <div id="flowers" aria-hidden="true"></div>
+
+  <main class="stage">
+    <div class="envelope" id="envelope" role="button" tabindex="0" aria-label="Open the letter">
+      <div class="env-back"></div>
+
+      <!-- THE CARD (comes out of the envelope, flips on tap) -->
+      <div class="letter" id="letter">
+        <div class="card3d" id="card3d">
+
+          <!-- FRONT: the message (edit the text here) -->
+          <div class="face front">
+            <div class="content">
+              <h1>For You 🌷</h1>
+              <p>
+                Hi, Roviee! Just a little reminder that it's okay to feel sad sometimes. Life isn't always easy, and you don't have to be okay all the time. Take your time, breathe, and don't be too hard on yourself. Better days will come, and I hope you never forget how special you are. Always cheering for you, okay? :))
+
+Oh, and I have a little something for you viee. I hope you'll like it. Hehe. Flip the card! 
+              </p>
+              <p>Keep blooming, always. 💗</p>
+              <span class="signature">— glenndhel</span>
+            </div>
+            <span class="flip-hint">tap the card ↻</span>
+          </div>
+
+          <!-- BACK: claim your tulip bouquet -->
+          <div class="face back">
+            <div class="content">
+              <small>a little surprise</small>
+              <h2>Claim your<br />tulip bouquet</h2>
+              <span class="tap-text">tap to claim 🌷</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="env-front">
+        <span class="pocket left"></span>
+        <span class="pocket right"></span>
+        <span class="pocket bottom"></span>
+      </div>
+
+      <div class="flap"></div>
+
+      <div class="seal">
+        <span class="tulip"></span>
+      </div>
+    </div>
+
+    <p class="hint" id="hint">tap the letter</p>
+  </main>
+
+  <!-- TULIP BOUQUET POP-UP -->
+  <div class="popup" id="popup" aria-hidden="true">
+    <div class="popup-backdrop" id="popupBackdrop"></div>
+    <div class="popup-card" role="dialog" aria-label="Your tulip bouquet">
+      <div class="bouquet-wrap">
+        <img id="bouquetImg" alt="Tulip bouquet" hidden />
+        <span id="bouquetFallback">💐</span>
+      </div>
+      <h2>Your tulip bouquet 🌷</h2>
+      <p>Just for you, always.</p>
+      <button class="close" id="popupClose" type="button">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
